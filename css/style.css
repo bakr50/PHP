@@ -1,0 +1,180 @@
+* , *::after , *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+  --gray-50:  #f9f9f9;   
+  --gray-100: #f2f2f2;   
+  --gray-200: #e5e5e5; 
+  --gray-300: #d4d4d4;  
+  --gray-400: #a3a3a3;   
+  --gray-500: #737373;   
+  --gray-600: #525252;   
+  --gray-700: #404040;   
+  --gray-800: #262626;  
+  --gray-900: #171717; 
+
+  --glass-bg: rgba(255, 255, 255, 0.12);
+
+}
+button{
+    background-color: var(--gray-400) !important;
+    color: #000 !important;
+    width: 100%;
+    margin-bottom:10px ;
+}
+button:hover {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 
+  0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 
+  0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+}
+
+label{
+
+    color: #000;
+    text-transform: capitalize;
+    position: absolute;
+    transform: all 1s;
+    top: 15px;
+    left: 10px;
+    padding: 10px 0px;
+    transition: all 0.8s;
+
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--gray-200);
+}
+.container{
+    max-width: 500px;
+    margin-bottom: 600px;
+    perspective: 900px;
+}
+
+.container .form .face{
+    position:  absolute;
+width: 100%;
+padding: 10px 15px;
+background: var(--glass-bg); 
+box-shadow: 4px 30px 50px -12px var(--gray-700);
+border-radius: 20px;
+backdrop-filter: blur(100px);
+backface-visibility: hidden;
+
+}
+.container .form .face.login{
+transform: rotateY(180deg);
+}
+
+.container .form{
+    position: relative;
+    transform-style: preserve-3d;
+transition:transform 1s ;
+transform-origin:right center ;
+}
+.container .form.rotate{
+    transform: translateX(-100%) rotateY(-180deg);
+}
+.container .form .mb-3{
+    position: relative;
+
+}
+.container .form input{
+padding: 20px 0px;
+background-color: var(--gray-100) ;
+border: none;
+outline: none ;
+width: 100%;
+color: var(--gray-700);
+padding-left: 12px;
+}
+.container .form input:focus{
+     outline-color: #e8e8e8;
+ background: #e8e8e8;
+ box-shadow: inset 20px 20px 60px #c5c5c5,
+		inset -20px -20px 60px #ffffff;
+ transition: 0.3s;
+}
+.passwordList{
+    position: absolute;
+    z-index: 1000;
+    background-color: var(--gray-500);
+clip-path: polygon(0 100%, 100% 100%, 100% 22%, 54% 21%, 47% 0, 40% 21%, 0 22%);
+color: #fff;
+
+
+
+}
+.passwordList >ul{
+padding: 30px;
+    position: relative;
+top: 35px;
+left: -10px;
+}
+.passwordList >ul li{
+list-style: none;
+
+}
+.passwordList >ul li span{
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+left: -5px;
+}
+/*page cor*/
+.cor{
+    border-radius: 20px;
+    width: 400px;
+    height: 300px;
+    background-color: var(--gray-200);
+padding: 5px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gray-300);
+}
+.cor form{
+    position: relative;
+}
+.cor #key{
+padding: 10px 0px;
+background-color: var(--gray-100) ;
+border: none;
+outline: none ;
+width: 300px;
+color: var(--gray-700);
+padding-left: 12px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.cor #key:focus{
+     outline-color: #e8e8e8;
+ background: #e8e8e8;
+ box-shadow: inset 20px 20px 60px #c5c5c5,
+		inset -20px -20px 60px #ffffff;
+ transition: 0.3s;
+
+}
+.cor button{
+    width: 300px;
+    padding: 10px 0px;
+    border: none;
+    margin: 20px 0px;
+}
+.cor label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+top: -5px;
+}
+.cor #key:focus+label{
+    top: -20px;
+}
